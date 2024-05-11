@@ -21,20 +21,16 @@ def equalpress():
 def clear():
     entry.delete(0, tk.END)
 
-# Main window
 root = tk.Tk()
 root.title("Calculator")
 root.geometry("400x500")
 root.configure(bg='#f0f0f0')
 
-# Custom font
 custom_font = tkfont.Font(family="Arial", size=18, weight="bold")
 
-# Entry field
 entry = tk.Entry(root, justify='right', font=custom_font, bd=5, insertwidth=4, width=15, bg='#ffffff', fg='#333333')
 entry.grid(row=0, column=0, columnspan=4, pady=20)
 
-# Buttons
 buttons = ['C', '(', ')', '/',
            '7', '8', '9', '*',
            '4', '5', '6', '+',
@@ -59,5 +55,5 @@ for button in buttons:
             col_val = 0
             row_val += 1
 
-# Run the application
+
 root.mainloop()
